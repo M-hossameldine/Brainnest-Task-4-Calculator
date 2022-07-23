@@ -165,6 +165,7 @@ function keyboardHandler(event) {
 }
 
 function enterDigitHandler(digit) {
+  if ((+totalResult === 0) & (+digit === 0)) return;
   // case this is the first digit in the second operand
   if (isWaitingSecondValue) {
     // set totalResult to 0 (let the previous displayed value)
@@ -173,7 +174,7 @@ function enterDigitHandler(digit) {
     isWaitingSecondValue = false;
   }
 
-  // clear display for
+  // clear display for new operations
   if (isNewOperation) {
     isNewOperation = false;
     setResult(0);
@@ -188,6 +189,13 @@ function enterDigitHandler(digit) {
 }
 
 function floatPointHandler() {
+  // clear display for new operations
+  if (isNewOperation) {
+    isNewOperation = false;
+    setResult(0);
+    if (!operator) setEquation('');
+  }
+
   let result = getResult().toString();
   isNewOperation = false;
 
