@@ -1,0 +1,148 @@
+/* Robot Font Import  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+
+/* ----------------------- */
+/* Custom Properties */
+/* ----------------------- */
+
+:root {
+  /* colors */
+  --clr-primary-100: #fff;
+  --clr-primary-300: #fafafa;
+  --clr-primary-400: #f0f0f0;
+  --clr-primary-500: #e6e6e6;
+  --clr-primary-600: #d4d4d4;
+  --clr-primary-900: #2c2c2c;
+
+  --clr-accent-400: #db9abe;
+  --clr-accent-500: #c85797;
+}
+
+/* ----------------------- */
+/* Reset                   */
+/* ----------------------- */
+
+/* Set Box Sizing for all elements */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Remove Margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--fs-300);
+  height: 100vh;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements & buttons easier to work with */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ----------------------- */
+/* Utility Classes         */
+/* ----------------------- */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 20rem;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn--contained {
+  cursor: pointer;
+  border-radius: 12%;
+  border-color: #ccc;
+  border: 0px;
+}
+
+.btn--ghost {
+  display: block;
+  color: var(--clr-primary-200);
+  background-color: transparent;
+  padding-inline: 1.5em;
+  padding-block: 0.25em;
+  border-radius: 4px;
+  border: 2px solid var(--clr-primary-200);
+}
+/* Colors */
+
+.bg-primary-300 {
+  background-color: var(--clr-primary-300);
+}
+.bg-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+.bg-primary-500 {
+  background-color: var(--clr-primary-500);
+}
+.bg-primary-600 {
+  background-color: var(--clr-primary-600);
+}
+.bg-white {
+  background-color: var(--clr-primary-100);
+}
+
+.bg-accent-400 {
+  background-color: var(--clr-accent-400);
+}
+.bg-accent-500 {
+  background-color: var(--clr-accent-500);
+}
+
+.text-primary-900 {
+  color: var(--clr-primary-900);
+}

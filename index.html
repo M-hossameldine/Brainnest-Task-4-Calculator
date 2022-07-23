@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  
+  <link rel="stylesheet" href="css/ui-styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="calculator container bg-primary-500">
+      <!-- Errors -->
+      <p class="error center-content"> Cannot divide by zero </p>
+      
+      <!-- Display part -->
+      <div class="equation"></div>
+      <div class="result">0</div>
+
+      <!-- main actions part -->
+      <section class="actions">
+        <button data-operation="DIV" class=" actions__operation divide pointer bg-primary-400"> / </button>
+        <button data-operation="MULT" class=" actions__operation multiply pointer bg-primary-400"> * </button>
+        <button data-operation="SUB" class=" actions__operation subtract pointer bg-primary-400"> - </button>
+        <button data-operation="ADD" class=" actions__operation add pointer bg-primary-400"> + </button>
+        <button class=" actions__equal pointer bg-accent-400"> = </button>
+      </section>
+
+      <!-- extra actions part -->
+      <section class="extra-actions">
+        <button class=" actions__clear-display pointer bg-primary-400">C</button>
+        <button class=" actions__backspace pointer bg-primary-400"> &larr; </button>
+      </section>
+
+      <!-- number part -->
+      <section class="numbers">
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 7 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 8 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 9 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 4 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 5 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 6 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 1 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 2 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 "> 3 </button>
+        <button class="numbers__digit center-content pointer bg-primary-300 zero-digit"> 0 </button>
+        <button class="numbers__float-point center-content pointer bg-primary-300 "> . </button>
+      </section>
+    </div>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,106 @@
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  position: relative;
+  flex: 0 0 100%;
+  padding: 0.25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 3rem);
+  gap: 3px;
+  grid-template-areas:
+    'equation equation equation equation'
+    'result   result   result   result'
+    'extra    extra    extra    actions'
+    'numbers  numbers  numbers  actions'
+    'numbers  numbers  numbers  actions'
+    'numbers  numbers  numbers  actions'
+    'numbers  numbers  numbers  actions';
+}
+
+/* error part */
+.error {
+  color: tomato;
+  font: bold;
+  width: 100%;
+  height: 2rem;
+  border: 2px solid tomato;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateY(-130%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.error.show {
+  opacity: 1;
+}
+/* Display part */
+.equation,
+.result {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid var(--clr-accent-400);
+  height: 2rem;
+  padding-inline: 0.25rem;
+}
+
+.equation {
+  grid-area: equation;
+}
+
+.result {
+  grid-area: result;
+}
+
+/* actions section */
+.actions {
+  grid-area: actions;
+  display: grid;
+  grid-auto-flow: 1fr;
+  gap: 3px;
+}
+
+/* extra-actions sections */
+.extra-actions {
+  grid-area: extra;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.actions__clear-display {
+  grid-column: span 2;
+}
+
+/* number section */
+.numbers {
+  grid-area: numbers;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.numbers__digit {
+}
+.zero-digit {
+  grid-column: span 2;
+}
+.numbers__float-point {
+  font-weight: 900;
+}
+
+.actions > *:hover,
+.extra-actions > *:hover,
+.numbers > *:hover {
+  background-color: var(--clr-primary-600);
+}
+
+.actions__equal:hover {
+  background-color: var(--clr-accent-500);
+}
