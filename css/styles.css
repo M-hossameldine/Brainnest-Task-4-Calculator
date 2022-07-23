@@ -86,11 +86,10 @@ main {
   gap: 3px;
 }
 
-.numbers__digit {
-}
 .zero-digit {
   grid-column: span 2;
 }
+
 .numbers__float-point {
   font-weight: 900;
 }

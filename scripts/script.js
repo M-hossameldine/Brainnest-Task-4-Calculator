@@ -119,7 +119,6 @@ function setEquation(equation) {
 }
 
 function setResult(result) {
-  console.log('setResult', result);
   totalResult = result; // save the result
   DisplayResultDiv.textContent = result; // display the result
 }
@@ -134,9 +133,8 @@ function getResult() {
 function keyboardHandler(event) {
   const numberList = '0123456789';
   const operationList = '/*-+';
-  console.log(event.keyCode);
+
   if (numberList.includes(event.key)) {
-    console.log(event.key);
     enterDigitHandler(event.key);
   } else if (operationList.includes(event.key)) {
     let operation = '';
@@ -193,8 +191,6 @@ function floatPointHandler() {
   let result = getResult().toString();
   isNewOperation = false;
 
-  console.log('float point initial result', result);
-  console.log('float point initial result type', typeof result);
   if (result && result.includes('.')) return;
 
   result += '.';
@@ -239,7 +235,6 @@ function enterOperationHandler(operation) {
 
 // is fired when equal button is pressed
 function calculateEquationHandler() {
-  // console.log({ operandOne, operator, totalResult });
   if (!operandOne || !operator || !totalResult) return;
 
   let result;
@@ -256,13 +251,6 @@ function calculateEquationHandler() {
 
     isNewOperation = true;
   }
-
-  // console.log('equal final state', {
-  //   operandOne,
-  //   operator,
-  //   totalResult,
-  //   isNewOperation,
-  // });
 }
 
 // reset calcultor to initial values
@@ -274,13 +262,6 @@ function clearDisplayHandler() {
 
   setEquation('');
   setResult(0);
-
-  console.log('clear final state', {
-    operandOne,
-    operator,
-    totalResult,
-    isNewOperation,
-  });
 }
 
 function removeLastCharacter(num) {
